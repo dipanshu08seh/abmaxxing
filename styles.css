@@ -23,6 +23,7 @@ body {
   line-height: 1.55;
 }
 a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
 .site-header {
   position: relative;
   z-index: 10;
@@ -34,11 +35,7 @@ a { color: inherit; text-decoration: none; }
   justify-content: space-between;
 }
 .brand, .footer-brand { display: flex; align-items: center; gap: 11px; font-weight: 760; letter-spacing: -.02em; }
-.logo-mark { width: 44px; height: 44px; padding: 7px; display: grid; grid-template-columns: repeat(2,1fr); gap: 3px; border: 1px solid rgba(255,138,50,.45); border-radius: 12px; background: linear-gradient(145deg,#27120d,#0c0b0d); box-shadow: 0 8px 30px rgba(255,90,31,.18); }
-.logo-mark i { display: block; border-radius: 50% 45% 45% 50%; background: linear-gradient(135deg,#ff9d3d,#d73712); box-shadow: inset 0 1px rgba(255,255,255,.35); }
-.logo-mark i:nth-child(even) { border-radius: 45% 50% 50% 45%; }
-.logo-mark.small { width: 32px; height: 32px; padding: 5px; border-radius: 9px; gap: 2px; }
-.logo-mark.large { width: 88px; height: 88px; padding: 14px; border-radius: 23px; gap: 5px; margin-bottom: 24px; box-shadow: 0 20px 70px rgba(255,90,31,.18); }
+.brand img, .footer-brand img { border-radius: 24%; box-shadow: 0 8px 30px rgba(255,90,31,.18); }
 nav { display: flex; align-items: center; gap: 28px; font-size: .92rem; color: #d4d1ca; }
 nav a:hover, .footer-links a:hover { color: #fff; }
 .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.04); }
@@ -69,27 +66,9 @@ h1 span { color: #8f8d87; }
 
 .hero-visual { position: relative; height: 580px; }
 .glow { position: absolute; inset: 15% 5%; border-radius: 50%; background: rgba(255,90,31,.26); filter: blur(80px); }
-.phone, .feature-phone { color: #f7f7f8; background: linear-gradient(180deg,#15171d,#090a0d); border: 1px solid rgba(255,255,255,.14); box-shadow: 0 38px 90px rgba(0,0,0,.62); }
-.phone { position: absolute; width: min(285px, 54%); min-height: 510px; padding: 38px 20px 24px; border-radius: 34px; overflow: hidden; }
+.phone { position: absolute; width: min(285px, 54%); border-radius: 34px; box-shadow: 0 38px 90px rgba(0,0,0,.62); border: 1px solid rgba(255,255,255,.14); }
 .phone-back { right: 2%; top: 18px; transform: rotate(6deg); opacity: .78; }
 .phone-front { left: 5%; bottom: 0; transform: rotate(-5deg); }
-.phone-notch { position: absolute; left: 50%; top: 10px; width: 76px; height: 20px; transform: translateX(-50%); border-radius: 999px; background: #020203; }
-.mock-kicker { margin: 13px 0 12px; color: #8e94a2; font-size: .62rem; font-weight: 800; letter-spacing: .14em; }
-.phone h4, .feature-phone h4 { margin: 0; font-size: 1.35rem; letter-spacing: -.04em; }
-.mock-muted { margin: 6px 0 18px; color: #858a96; font-size: .74rem; }
-.mock-cta { display: block; margin: 18px 0; padding: 12px; border-radius: 10px; background: #4d82ff; text-align: center; font-size: .76rem; font-weight: 800; }
-.mock-list { display: grid; gap: 0; margin-top: 13px; }
-.mock-list span { padding: 15px 2px; border-bottom: 1px solid rgba(255,255,255,.08); font-size: .72rem; }
-.mock-list b { float: right; color: #b9bdc7; }
-.score-ring, .calorie-ring { width: 142px; height: 142px; margin: 25px auto; border: 8px solid #3fd488; border-right-color: #21332b; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.score-ring strong, .calorie-ring strong { font-size: 2.2rem; line-height: 1; }
-.score-ring span, .calorie-ring span { margin-top: 7px; color: #8f949f; font-size: .55rem; letter-spacing: .12em; }
-.calorie-ring { border-color: #4d82ff; border-right-color: #222a3c; }
-.calorie-ring strong { font-size: 1.55rem; }
-.metric-grid, .macro-row { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
-.metric-grid span, .macro-row span { padding: 11px; border: 1px solid rgba(255,255,255,.08); border-radius: 9px; color: #979ca7; font-size: .62rem; text-transform: uppercase; }
-.metric-grid b, .macro-row b { display: block; margin-top: 3px; color: #f6f6f7; font-size: .92rem; }
-.macro-row { grid-template-columns: repeat(3,1fr); }
 
 .proof-strip {
   max-width: var(--max);
@@ -120,12 +99,13 @@ h3 { margin: 17px 0 20px; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.03; 
 .feature-copy li::before { content: ""; position: absolute; left: 2px; top: 18px; width: 7px; height: 7px; border-radius: 50%; background: var(--orange); }
 .feature-media { min-height: 560px; border: 1px solid var(--line); border-radius: 28px; overflow: hidden; display: grid; place-items: end center; position: relative; }
 .feature-media::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 70%, rgba(255,255,255,.1), transparent 55%); }
-.feature-phone { position: relative; width: 285px; min-height: 510px; margin-bottom: -70px; padding: 38px 20px 24px; border-radius: 34px; }
+.feature-media img { position: relative; width: 285px; margin-bottom: -90px; border-radius: 34px; box-shadow: 0 30px 70px rgba(0,0,0,.48); }
 .workout-media { background: linear-gradient(145deg, #15191a, #27200f); }
 .nutrition-media { background: linear-gradient(145deg, #161315, #35180f); }
 .progress-media { background: linear-gradient(145deg, #131419, #231723); }
 
 .closing-card { max-width: var(--max); margin: 150px auto 0; padding: 100px 28px; min-height: 520px; border-top: 1px solid var(--line); text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 55%, rgba(255,90,31,.11), transparent 26rem); }
+.closing-card img { border-radius: 24%; margin-bottom: 24px; box-shadow: 0 20px 70px rgba(255,90,31,.18); }
 .closing-card h2 { max-width: 700px; }
 .closing-card > p:not(.eyebrow) { margin: 20px 0 30px; color: var(--muted); }
 
@@ -165,7 +145,7 @@ footer > p { grid-column: 1 / -1; margin: 0; }
   .hero-visual { height: 455px; }
   .phone { width: 60%; border-radius: 25px; }
   .feature-media { min-height: 430px; }
-  .feature-phone { width: 235px; border-radius: 28px; }
+  .feature-media img { width: 235px; border-radius: 28px; }
   .closing-card { padding-left: 20px; padding-right: 20px; }
 }
 

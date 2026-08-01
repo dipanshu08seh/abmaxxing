@@ -48,8 +48,8 @@
         <article class="policy-content">
           <section id="scope">
             <h2>1. Scope and age requirement</h2>
-            <p>SuperAbs is operated by Dipanshu in India ("we," "us," or "our"). This policy applies to the SuperAbs iOS app (the "App") and its AI-powered features.</p>
-            <p>Photo-based body scans and meal analysis are available only to people aged 18 or older. Typed meal-description analysis does not require a photograph and remains available as implemented in the App. Do not submit another person's photograph, meal information, or other personal information without their permission.</p>
+            <p>SuperAbs is operated by Dipanshu in India ("we," "us," or "our"). This policy applies to the SuperAbs iOS app (the "App"), its AI-powered features, and its optional public weekly leaderboard.</p>
+            <p>Photo-based body scans, meal-photo analysis, and the public leaderboard are available only to people aged 18 or older. Typed meal-description analysis does not require a photograph and remains available as implemented in the App. Do not submit another person's photograph, meal information, or other personal information without their permission.</p>
           </section>
 
           <section id="information">
@@ -64,6 +64,12 @@
               <li>Body-scan photographs, scan scores, recommendations, and progress comparisons.</li>
             </ul>
             <p>We do not upload this local history to our own database as part of the App's ordinary operation.</p>
+            <p>If you do not join the public leaderboard, the App calculates the same weekly XP goal only on your device. Private XP and private activity history are not uploaded to the leaderboard and are never backfilled if you join later.</p>
+
+            <h3>Information sent when you join the public leaderboard</h3>
+            <p>Joining is optional and requires an adult self-attestation, acceptance of the current leaderboard consent, and linking the App's Firebase account to Sign in with Apple. We store the attestation and consent timestamps and versions, but not your age or birth date. Firebase Authentication stores the Apple-provider link and a Firebase user identifier so the leaderboard remains associated with the correct account.</p>
+            <p>Only activity occurring after enrollment can earn public XP. For accepted events, we store a minimal event type, time, replay-prevention key, locked weekly time zone, weekly XP totals, lifetime XP and level, division, result, and trophy summary. We do not upload meal contents, photos, calorie or macro values, water quantities, workout duration, weight, body fat, scan data, body measurements, streak length, or the rest of your private health history for leaderboard scoring.</p>
+            <p>Other participants see only a server-generated alias and fixed icon, weekly XP, level, division, rank, and league result. They do not see your name, Apple account details, photographs, biography, meals, measurements, or workout details.</p>
 
             <h3>Information sent when you use AI analysis</h3>
             <p>When you choose an AI body scan or meal analysis, we send the selected photograph or typed meal description, your declared age where required for photo analysis, and an anonymous Firebase account identifier to our Firebase Functions service in the United States. The service sends the photo or text to OpenAI to moderate the input and generate the requested analysis or estimate. The result is returned to your device and stored with your local history only after you choose to save it.</p>
@@ -79,12 +85,13 @@
               <li>Device, app, network, and attribution information collected by AppsFlyer, such as device identifiers, IP address, app interaction or campaign-attribution data, and—only if you allow tracking—the advertising identifier (IDFA).</li>
               <li>Permission status for camera, photos, notifications, and tracking.</li>
             </ul>
-            <p>Firebase product analytics does not receive your name, onboarding answers, photographs, meal descriptions, foods, body measurements, nutrition values, scan scores, free-text feedback, or identifiers for records stored on your device. Advertising-personalization signals are disabled and the anonymous Firebase Authentication identifier is not used as an Analytics User-ID.</p>
+            <p>If you join the public leaderboard, we also process the Firebase user identifier linked to Apple, generated alias and icon, adult-attestation and consent records, minimal qualifying-activity events, weekly and lifetime XP, level, division, standings, and results. Leaderboard analytics record flow and outcome events but do not contain aliases, Apple account details, health values, or meal and workout contents.</p>
+            <p>Firebase product analytics does not receive your name, onboarding answers, photographs, meal descriptions, foods, body measurements, nutrition values, scan scores, free-text feedback, leaderboard alias, or identifiers for records stored on your device. Advertising-personalization signals are disabled and the Firebase Authentication identifier is not used as an Analytics User-ID.</p>
           </section>
 
           <section id="use">
             <h2>3. How we use information</h2>
-            <p>We use information to provide personalized workouts and local progress tracking; process requested AI analyses; apply daily AI-feature limits; verify and restore subscriptions; understand onboarding and feature use; measure subscription, retention, attribution, and App performance; protect the App from misuse; respond to support requests; and comply with legal obligations.</p>
+            <p>We use information to provide personalized workouts and local progress tracking; operate the optional weekly leaderboard and prevent duplicate or abusive scoring; process requested AI analyses; apply daily AI-feature limits; verify and restore subscriptions; understand onboarding and feature use; measure subscription, retention, attribution, and App performance; protect the App from misuse; respond to support requests; and comply with legal obligations.</p>
             <p>We do not sell personal information. We do not use body or meal images for advertising, and we do not use them to train AI models.</p>
           </section>
 
@@ -92,8 +99,8 @@
             <h2>4. How information is shared</h2>
             <p>We share information only as needed to provide the App:</p>
             <ul>
-              <li><strong>Apple</strong> processes App Store purchases, subscription management, and iOS permissions.</li>
-              <li><strong>Firebase / Google Cloud</strong> provides anonymous authentication, App Check, product analytics, callable functions, Firestore quota storage, and associated cloud infrastructure. The AI functions run in <code>us-central1</code>.</li>
+              <li><strong>Apple</strong> processes App Store purchases, subscription management, iOS permissions, and Sign in with Apple authentication for adults who choose to join the public leaderboard.</li>
+              <li><strong>Firebase / Google Cloud</strong> provides anonymous and Apple-linked authentication, App Check, product analytics, callable functions, Firestore leaderboard and quota storage, and associated cloud infrastructure. The online functions and Firestore database run in <code>us-central1</code> in the United States.</li>
               <li><strong>OpenAI</strong> moderates and analyzes the photos and meal descriptions you choose to submit for AI features.</li>
               <li><strong>RevenueCat</strong> processes subscription entitlement and purchase-status information.</li>
               <li><strong>AppsFlyer</strong> provides mobile attribution and measurement services.</li>
@@ -108,20 +115,22 @@
               <li><strong>Notifications:</strong> Onboarding does not request notification permission. You can enable reminders later from the App and disable them in iOS Settings.</li>
               <li><strong>Tracking:</strong> Onboarding does not request tracking permission. At a later relevant moment, the App may ask through Apple's App Tracking Transparency prompt. If allowed, AppsFlyer may use IDFA for attribution and advertising measurement. Denying permission does not prevent use of the App.</li>
               <li><strong>Product analytics:</strong> Privacy-safe Firebase product analytics is independent of tracking permission and does not use IDFA. You can stop future collection in <strong>SuperAbs → Profile → App settings → Share Product Analytics</strong>. Disabling it also removes the Firebase app-instance identifier shared with RevenueCat for subscription-event measurement.</li>
+              <li><strong>Public leaderboard:</strong> Joining is optional. Adults can decline and continue with private, device-only weekly XP. An enrolled participant can use <strong>Leave Leaderboard</strong> to stop public participation or <strong>Delete Account</strong> to remove leaderboard and quota data and delete the linked Firebase account. Account deletion requires Apple reauthentication and asks Apple to revoke the authorization before the App starts a fresh anonymous session.</li>
             </ul>
           </section>
 
           <section id="retention">
             <h2>6. Retention and deletion</h2>
             <p>Local App data remains on your device until you delete it through available App controls or delete the App. Deleting the App removes data in its local app container, including local photos, scan results, meal history, workout history, and profile data.</p>
-            <p>Server-side Firebase daily quota records are retained for 30 days and then automatically deleted. Limited operational logs are retained for 90 days. Firebase Analytics event-level data is configured for 14-month retention; aggregate reporting may remain available longer. OpenAI's API abuse-monitoring retention may be up to 30 days. Apple, RevenueCat, Firebase, and AppsFlyer may retain information for the periods described in their policies or as required by law.</p>
-            <p>Because the AI service uses an anonymous identifier rather than a named account, we may not be able to locate a server-side record from an email address alone. Those records expire automatically on the schedules above.</p>
+            <p>Server-side Firebase daily quota records are retained for 30 days. Minimal leaderboard event ledgers are retained for 35 days, and finalized league entries for 90 days. Leaderboard membership and the latest 12 trophy summaries remain until you leave or delete your account. Leaving removes your public identity, progress, events, trophies, and public participation; a minimal leave time and next-eligible-week record remains temporarily to enforce the weekly re-entry rule. Account deletion purges leaderboard and quota data, revokes the Apple authorization where applicable, and deletes the Firebase user. Deletion cannot remove aggregate, de-identified analytics or records that must be retained for security or legal reasons.</p>
+            <p>Limited operational logs are retained for 90 days. Firebase Analytics event-level data is configured for 14-month retention; aggregate reporting may remain available longer. OpenAI's API abuse-monitoring retention may be up to 30 days. Apple, RevenueCat, Firebase, and AppsFlyer may retain information for the periods described in their policies or as required by law.</p>
+            <p>Because the AI service uses a Firebase identifier rather than your name, we may not be able to locate a server-side record from an email address alone. Those records expire automatically on the schedules above. If you linked Apple for the leaderboard, use the in-App account controls while signed in whenever possible.</p>
           </section>
 
           <section id="your-choices">
             <h2>7. Your rights and choices</h2>
             <p>Depending on where you live, you may have rights to request access to, correction of, deletion of, or information about the processing of personal information, or to withdraw consent where processing is based on consent.</p>
-            <p>To make a request, email <a href="mailto:abmaxxing.contact@gmail.com?subject=SuperAbs%20Privacy%20Request">abmaxxing.contact@gmail.com</a> with enough detail for us to understand the request. We may need to verify the request before responding. You can stop future local collection by deleting the App and manage subscriptions through your Apple account.</p>
+            <p>To make a request, email <a href="mailto:abmaxxing.contact@gmail.com?subject=SuperAbs%20Privacy%20Request">abmaxxing.contact@gmail.com</a> with enough detail for us to understand the request. We may need to verify the request before responding. You may withdraw from the public leaderboard without deleting local health history, delete the linked online account from the App, stop future local collection by deleting the App, and manage subscriptions separately through your Apple account.</p>
           </section>
 
           <section id="security">

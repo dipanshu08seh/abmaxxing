@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn how SuperAbs handles app data, AI analysis, subscriptions, analytics, attribution, retention, and privacy choices.">
+  <meta name="theme-color" content="#08080a">
+  <title>Privacy Policy — SuperAbs</title>
+  <link rel="icon" href="../assets/app-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="privacy-page">
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="SuperAbs home">
+      <img src="../assets/app-icon.png" alt="" width="44" height="44">
+      <span>SuperAbs</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="../">Home</a>
+      <a href="../support/">Support</a>
+      <a class="nav-cta" href="https://apps.apple.com/us/app/id6793422782">View on App Store</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="privacy-shell">
+      <header class="policy-hero">
+        <p class="eyebrow">SuperAbs privacy</p>
+        <h1>Privacy Policy</h1>
+        <p class="policy-intro">This policy explains what stays on your device, what is sent to service providers when you use online features, and the choices available to you.</p>
+        <p class="policy-effective"><strong>Effective date:</strong> 1 August 2026</p>
+      </header>
+
+      <div class="policy-layout">
+        <nav class="policy-nav" aria-label="Privacy policy sections">
+          <strong>On this page</strong>
+          <a href="#scope">Scope & age</a>
+          <a href="#information">Information</a>
+          <a href="#use">How we use it</a>
+          <a href="#sharing">Sharing</a>
+          <a href="#choices">Permissions</a>
+          <a href="#retention">Retention</a>
+          <a href="#your-choices">Your rights</a>
+          <a href="#security">Security</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <article class="policy-content">
+          <section id="scope">
+            <h2>1. Scope and age requirement</h2>
+            <p>SuperAbs is operated by Dipanshu in India ("we," "us," or "our"). This policy applies to the SuperAbs iOS app (the "App") and its AI-powered features.</p>
+            <p>Photo-based body scans and meal analysis are available only to people aged 18 or older. Typed meal-description analysis does not require a photograph and remains available as implemented in the App. Do not submit another person's photograph, meal information, or other personal information without their permission.</p>
+          </section>
+
+          <section id="information">
+            <h2>2. Information we handle</h2>
+
+            <h3>Information stored on your device</h3>
+            <p>The App stores information locally in its iOS app container so it can provide your plan and history. This may include:</p>
+            <ul>
+              <li>Profile and plan information, including your name if supplied, age, gender, height, weight, goals, activity and training preferences, equipment, and obstacles.</li>
+              <li>Workout plans, completed workouts, progress, hydration, and weight entries.</li>
+              <li>Meal entries, nutrition estimates, meal descriptions, food photographs, and associated AI results.</li>
+              <li>Body-scan photographs, scan scores, recommendations, and progress comparisons.</li>
+            </ul>
+            <p>We do not upload this local history to our own database as part of the App's ordinary operation.</p>
+
+            <h3>Information sent when you use AI analysis</h3>
+            <p>When you choose an AI body scan or meal analysis, we send the selected photograph or typed meal description, your declared age where required for photo analysis, and an anonymous Firebase account identifier to our Firebase Functions service in the United States. The service sends the photo or text to OpenAI to moderate the input and generate the requested analysis or estimate. The result is returned to your device and stored with your local history only after you choose to save it.</p>
+            <p>We do not use AI inputs to identify you by name. A hashed version of the anonymous Firebase identifier is sent to OpenAI as a safety identifier. OpenAI API requests are configured with <code>store: false</code>. OpenAI may retain API content and related metadata in abuse-monitoring logs for up to 30 days under its standard API data controls, and does not use API data to train or improve its models unless the API customer opts in.</p>
+
+            <h3>Service, purchase, and attribution information</h3>
+            <p>To run, secure, and improve the App, our service providers may process:</p>
+            <ul>
+              <li>An anonymous Firebase Authentication identifier and the number of AI analyses used on a given UTC day.</li>
+              <li>Limited operational logs such as a hashed anonymous identifier, endpoint, outcome, model, timing, usage totals, and provider request ID.</li>
+              <li>Subscription entitlement and purchase-status information from RevenueCat and Apple. We do not receive or store your full payment-card number.</li>
+              <li>A randomly generated Firebase app-instance identifier and privacy-safe product-interaction information, including screens, feature entry points, actions, outcomes, permission outcomes, subscription-access state, aggregate workout counts, and feature timing.</li>
+              <li>Device, app, network, and attribution information collected by AppsFlyer, such as device identifiers, IP address, app interaction or campaign-attribution data, and—only if you allow tracking—the advertising identifier (IDFA).</li>
+              <li>Permission status for camera, photos, notifications, and tracking.</li>
+            </ul>
+            <p>Firebase product analytics does not receive your name, onboarding answers, photographs, meal descriptions, foods, body measurements, nutrition values, scan scores, free-text feedback, or identifiers for records stored on your device. Advertising-personalization signals are disabled and the anonymous Firebase Authentication identifier is not used as an Analytics User-ID.</p>
+          </section>
+
+          <section id="use">
+            <h2>3. How we use information</h2>
+            <p>We use information to provide personalized workouts and local progress tracking; process requested AI analyses; apply daily AI-feature limits; verify and restore subscriptions; understand onboarding and feature use; measure subscription, retention, attribution, and App performance; protect the App from misuse; respond to support requests; and comply with legal obligations.</p>
+            <p>We do not sell personal information. We do not use body or meal images for advertising, and we do not use them to train AI models.</p>
+          </section>
+
+          <section id="sharing">
+            <h2>4. How information is shared</h2>
+            <p>We share information only as needed to provide the App:</p>
+            <ul>
+              <li><strong>Apple</strong> processes App Store purchases, subscription management, and iOS permissions.</li>
+              <li><strong>Firebase / Google Cloud</strong> provides anonymous authentication, App Check, product analytics, callable functions, Firestore quota storage, and associated cloud infrastructure. The AI functions run in <code>us-central1</code>.</li>
+              <li><strong>OpenAI</strong> moderates and analyzes the photos and meal descriptions you choose to submit for AI features.</li>
+              <li><strong>RevenueCat</strong> processes subscription entitlement and purchase-status information.</li>
+              <li><strong>AppsFlyer</strong> provides mobile attribution and measurement services.</li>
+            </ul>
+            <p>These providers may process information in countries other than yours. Their own privacy policies may also apply to their processing.</p>
+          </section>
+
+          <section id="choices">
+            <h2>5. Permissions and tracking choices</h2>
+            <ul>
+              <li><strong>Camera and photo library:</strong> Camera access is optional and requested only when an eligible adult chooses to capture a body-scan or meal photo. Selecting an existing image uses Apple's system photo picker. You can deny or revoke camera access in iOS Settings, skip the onboarding scan, and continue using non-photo parts of the App.</li>
+              <li><strong>Notifications:</strong> Onboarding does not request notification permission. You can enable reminders later from the App and disable them in iOS Settings.</li>
+              <li><strong>Tracking:</strong> Onboarding does not request tracking permission. At a later relevant moment, the App may ask through Apple's App Tracking Transparency prompt. If allowed, AppsFlyer may use IDFA for attribution and advertising measurement. Denying permission does not prevent use of the App.</li>
+              <li><strong>Product analytics:</strong> Privacy-safe Firebase product analytics is independent of tracking permission and does not use IDFA. You can stop future collection in <strong>SuperAbs → Profile → App settings → Share Product Analytics</strong>. Disabling it also removes the Firebase app-instance identifier shared with RevenueCat for subscription-event measurement.</li>
+            </ul>
+          </section>
+
+          <section id="retention">
+            <h2>6. Retention and deletion</h2>
+            <p>Local App data remains on your device until you delete it through available App controls or delete the App. Deleting the App removes data in its local app container, including local photos, scan results, meal history, workout history, and profile data.</p>
+            <p>Server-side Firebase daily quota records are retained for 30 days and then automatically deleted. Limited operational logs are retained for 90 days. Firebase Analytics event-level data is configured for 14-month retention; aggregate reporting may remain available longer. OpenAI's API abuse-monitoring retention may be up to 30 days. Apple, RevenueCat, Firebase, and AppsFlyer may retain information for the periods described in their policies or as required by law.</p>
+            <p>Because the AI service uses an anonymous identifier rather than a named account, we may not be able to locate a server-side record from an email address alone. Those records expire automatically on the schedules above.</p>
+          </section>
+
+          <section id="your-choices">
+            <h2>7. Your rights and choices</h2>
+            <p>Depending on where you live, you may have rights to request access to, correction of, deletion of, or information about the processing of personal information, or to withdraw consent where processing is based on consent.</p>
+            <p>To make a request, email <a href="mailto:abmaxxing.contact@gmail.com?subject=SuperAbs%20Privacy%20Request">abmaxxing.contact@gmail.com</a> with enough detail for us to understand the request. We may need to verify the request before responding. You can stop future local collection by deleting the App and manage subscriptions through your Apple account.</p>
+          </section>
+
+          <section id="security">
+            <h2>8. Security</h2>
+            <p>We use reasonable technical and organizational safeguards designed to protect information, including platform security controls, Firebase App Check, authenticated callable services, and restricted database access. No method of electronic storage or transmission is completely secure, so we cannot guarantee absolute security.</p>
+          </section>
+
+          <section id="changes">
+            <h2>9. Changes to this policy</h2>
+            <p>We may update this policy when the App or applicable requirements change. We will post the updated version on this page and change the effective date. Material changes may also be communicated in the App where appropriate.</p>
+          </section>
+
+          <section id="contact">
+            <h2>10. Contact</h2>
+            <p><strong>Dipanshu</strong><br>India<br><a href="mailto:abmaxxing.contact@gmail.com?subject=SuperAbs%20Privacy">abmaxxing.contact@gmail.com</a></p>
+          </section>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <img src="../assets/app-icon.png" alt="" width="32" height="32">
+      <span>SuperAbs</span>
+    </div>
+    <div class="footer-links">
+      <a href="../">Home</a>
+      <a href="../support/">Support</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
+    </div>
+    <p>© 2026 Dipanshu Sehrawat. All rights reserved.</p>
+  </footer>
+</body>
+</html>

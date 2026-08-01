@@ -1,2 +1,3 @@
-# abmaxxing
-Official marketing and support site for AbMaxxing — core workouts, nutrition, and progress tracking.
+# SuperAbs
+
+Official marketing, support, and privacy site for SuperAbs — core workouts, nutrition, and progress tracking.
